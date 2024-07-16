@@ -34,7 +34,7 @@ const CreatePost = () => {
             body: JSON.stringify({prompt: form.promt}),
           })
 
-          const data
+          const data = await response.json();
       }catch(e){
 
       }
