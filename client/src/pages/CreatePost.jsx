@@ -20,7 +20,20 @@ const CreatePost = () => {
   const [loading, setLoading] = useState(false);
 
 
-  const generateImage = () => {
+  const generateImage = async () => {
+
+    if(form.promt){
+      try{
+          setGeneratingImg(true);
+
+          const response = await fetch('http://localhost:8080/api/v1/dalle', {
+            method: 'POST',
+            headers:
+          })
+      }catch{
+
+      }
+    }
 
   }
   const handleSubmit = () => {
