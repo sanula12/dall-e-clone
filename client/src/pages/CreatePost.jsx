@@ -28,9 +28,14 @@ const CreatePost = () => {
 
           const response = await fetch('http://localhost:8080/api/v1/dalle', {
             method: 'POST',
-            headers:
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({prompt: form.promt}),
           })
-      }catch{
+
+          const data = await response.json();
+      }catch(e){
 
       }
     }
