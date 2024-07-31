@@ -36,7 +36,9 @@ const CreatePost = () => {
 
           const data = await response.json();
       }catch(e){
-
+        alert(e);
+      }finally{
+        setGeneratingImg(false);  
       }
     }
 
